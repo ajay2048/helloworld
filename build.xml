@@ -3,12 +3,4 @@
    <target name = "info">
       <echo>Hello World - Welcome to Apache Ant!</echo>
    </target>
-   <taskdef name="S3Upload" classname="dak.ant.taskdefs.S3Upload">
-    <classpath refid="classpath.compile" />
-   </taskdef>
-    <target name="upload">
-       <S3Upload verbose="true" accessId="AKIAXASHHNVY26CESDO7" secretKey="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" bucket="avankia-buckets" publicRead="true">
-        <fileset dir="lib" includes="mail.jar" />
-       </S3Upload>
-    </target
    </project>
