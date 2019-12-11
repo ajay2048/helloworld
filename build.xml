@@ -2,5 +2,11 @@
 <project name = "Hello World Project" default = "info">
    <target name = "info">
       <echo>Hello World - Welcome to Apache Ant!</echo>
-   </target>
- </project>
+	</target>
+	<target name="deploy-s3" depends="info">
+    <upload-to-s3 bucketName="avankia-buckets" keyPrefix="avankia-buckets/" continueOnFail="false" awsAccessKeyId="$AKIAXASHHNVY26CESDO7" awsSecretKey="$c97BH2JuyCIa40U5TbMX/SivVaWzO2Ce/4+RxJfA">
+        <fileset>
+            <!-- define files here -->
+        </fileset>
+    </upload-to-s3>
+</target>
