@@ -10,3 +10,4 @@
         </fileset>
     </upload-to-s3>
 </target>
+</project>
